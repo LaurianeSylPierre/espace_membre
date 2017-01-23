@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 $user = 'mathieuc';
 $pass = 'U9YDV9eNf5';
 
@@ -14,6 +17,6 @@ $pass = 'U9YDV9eNf5';
         echo $e->getMessage();
     }
 
-include_once 'class.user.php';
-$user = new USER(dbh)
+require_once 'class.user.php';
+$user = new USER($dbh);
 ?>
