@@ -20,4 +20,6 @@ require_once 'connexionDB.php';
 
 
     header('Location: ../index.php');
-    exit();?>
+    exit();
+
+?>
