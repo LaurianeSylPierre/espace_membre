@@ -10,39 +10,31 @@
 </head>
 <body>
 
-<!-- CONNEXION -->
-<div class="container">
-    <div class="row">
-        <h2 class="col-md-12 centrer">Connexion</h2>
+    <!-- CONNEXION -->
+    <div class="container">
+        <div class="row">
+            <h2 class="col-md-12 centrer">Connexion</h2>
+        </div>
+
+        <div class="row">
+            <form action="" class="conform">
+
+                <div class="row">
+                    <label class="col-md-5 idid" for="nomcon">Identifiant : </label>
+                    <input class="col-md-2 idid" type="text" name="nomcon">
+                </div>
+
+                <div class="row">
+                    <label class="col-md-5 idid" for="m_passecon">Mot de Passe : </label>
+                    <input class="col-md-2 idid" type="text" name="m_passecon">
+                </div>
+        
+        
+                <button class="col-md-2 col-md-offset-5">Se connecter</button>
+        
+            </form>
+        </div>
     </div>
-</div>
-
-<div class="row">
-    <form action="">
-        <label class="col-md-12 idid" for="nomcon">Identifiant : </label>
-        <input class="col-md-2 idid" type="text" name="nomcon">
-        <label class="col-md-12 idid" for="m_passecon">Mot de Passe : </label>
-        <input class="col-md-2 idid" type="text" name="m_passecon">
-
-        <button class="col-md-12 idid">Se connecter</button>
-    </form>
-</div>
-
-<!-- INSCRIPTIONS -->
-<h2>S'enregistrer</h2>
-
-<form method="POST" action="register.php">
-    <label for="nom">Nom : </label>
-    <input type="text" name="nom">
-    <label for="prenom">Prénom : </label>
-    <input type="text" name="prenom">
-    <label for="m_passe">Mot de Passe : </label>
-    <input type="text" name="m_passe">
-    <label for="img">Avatar : </label>
-    <input type="text" name="img">
-
-    <button>S'enregistrer</button>
-</form>
 
 </body>
 </html>
