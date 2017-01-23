@@ -1,5 +1,6 @@
 h2{
 	text-align: center;
+	margin-top: 20%;
 }
 
 .place{
@@ -9,4 +10,18 @@ h2{
 
 .conform{
 	margin: 0 auto;
+
+}
+
+.id{
+	margin-top: 2%;
+	margin-bottom: 1%;
+}
+
+.idid{
+	margin-bottom: 1%;
+}
+
+button{
+	margin-top: 1%;
 }
