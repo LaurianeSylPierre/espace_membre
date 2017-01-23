@@ -17,6 +17,6 @@ $pass = 'U9YDV9eNf5';
         echo $e->getMessage();
     }
 
-require_once 'class.user.php';
+include_once 'class.user.php';
 $user = new USER($dbh);
 ?>
