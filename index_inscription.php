@@ -11,8 +11,8 @@
 	<body>
 		<h1>Inscription</h1>
 		<div class="container">
-				<form class="formulaire">
-					<div class="row mt100">
+				<form method="POST" action="controleur/register.php" class="formulaire">
+					<div class="row">
 							<label class="col-md-5 text-right">Identifiant :</label>
 							<input types="text" class="col-md-3">
 					</div>
@@ -36,6 +36,8 @@
 							<label class="col-md-5 text-right">Images :</label>
 							<input types="text" class="col-md-3">
 					</div>
+
+					<button class="btn btn-default col-md-offset-7 bouton" type="submit">Envoyer</button>
 				</form>
 		</div>
 	</body>
