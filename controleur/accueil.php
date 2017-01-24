@@ -3,7 +3,7 @@
 
     $membre_login = $_SESSION['login_session'];
     $stmt = $dbh->prepare("SELECT * FROM membre WHERE login = :login");
-    stmt->execute(array(":login"=>$membre_login));
+    $stmt->execute(array(":login"=>$membre_login));
     $membreRow=$stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 

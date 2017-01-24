@@ -14,11 +14,11 @@
 				<form method="POST" action="controleur/register.php" class="formulaire">
 					<div class="row">
 							<label class="col-md-5 text-right">Identifiant :</label>
-							<input types="text" class="col-md-3" name="indentifiant">
+							<input types="text" class="col-md-3" name="login">
 					</div>
 					<div class="row mt10">
 							<label class="col-md-5 text-right">Mot de passe :</label>
-							<input types="text" class="col-md-3" name="mot_de_passe">
+							<input types="text" class="col-md-3" name="m_passe">
 					</div>
 					<div class="row mt10">
 							<label class="col-md-5 text-right">Ressaisisez votre mot de passe :</label>
