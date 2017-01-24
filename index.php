@@ -1,3 +1,9 @@
+<?php
+
+require_once 'controleur/connexionDB.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,11 +26,11 @@
             <form method="POST" action="controleur/login.php" class="conform">
 
                 <div class="row">
-                    <input class="col-md-2 col-md-offset-5 id" type="text" name="nomcon" placeholder="Identifiant">
+                    <input class="col-md-2 col-md-offset-5 id" type="text" name="login" placeholder="Identifiant">
                 </div>
 
                 <div class="row">
-                    <input class="col-md-2 col-md-offset-5 idid" type="password" name="m_passecon" placeholder="Mot de passe">
+                    <input class="col-md-2 col-md-offset-5 idid" type="password" name="m_passe" placeholder="Mot de passe">
                 </div>
 
                 <div class="checkbox col-md-2 col-md-offset-5">

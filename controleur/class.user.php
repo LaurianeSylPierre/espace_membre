@@ -1,5 +1,7 @@
 <?php
 
+include_once('password_verify');
+
 //Ce fichier contient les fonctions (register, login, is_loggedin et redirect) qui permettent de maintenir les activités de l'utilisateur
 
     class MEMBRE {
@@ -43,6 +45,7 @@
                 $membreRow=$stmt->fetch(PDO::FETCH_ASSOC); //permet la récupération de l'array
 
                 if($stmt->rowCOUNT() > 0){ //Si l'utilisateur entre des données
+
                     if(password_verify($m_passe, $membreRow['m_passe'])){
                         $_SESSION['login_session'] = $membreRow['id_membre'];
                     }
