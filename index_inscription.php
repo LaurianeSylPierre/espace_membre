@@ -14,11 +14,11 @@
 				<form method="POST" action="controleur/register.php" class="formulaire">
 					<div class="row">
 							<label class="col-md-5 text-right">Identifiant :</label>
-							<input types="text" class="col-md-3">
+							<input types="text" class="col-md-3" name="indentifiant">
 					</div>
 					<div class="row mt10">
 							<label class="col-md-5 text-right">Mot de passe :</label>
-							<input types="text" class="col-md-3">
+							<input types="text" class="col-md-3" name="mot_de_passe">
 					</div>
 					<div class="row mt10">
 							<label class="col-md-5 text-right">Ressaisisez votre mot de passe :</label>
@@ -26,18 +26,18 @@
 					</div>
 					<div class="row mt10">
 							<label class="col-md-5 text-right">Nom :</label>
-							<input types="text" class="col-md-3">
+							<input types="text" class="col-md-3" name="nom">
 					</div>
 					<div class="row mt10">
 							<label class="col-md-5 text-right">Prénom :</label>
-							<input types="text" class="col-md-3">
+							<input types="text" class="col-md-3" name="prenom">
 					</div>
 					<div class="row mt10">
 							<label class="col-md-5 text-right">Images :</label>
-							<input types="text" class="col-md-3">
+							<input types="text" class="col-md-3" name="img">
 					</div>
 
-					<button class="btn btn-default col-md-offset-7 bouton" type="submit">Envoyer</button>
+					<button class="btn btn-default col-md-offset-7 pourquoipas" type="submit">Envoyer</button>
 				</form>
 		</div>
 	</body>

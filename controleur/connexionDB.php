@@ -18,8 +18,5 @@ $pass = 'U9YDV9eNf5';
     }
 
 include_once 'class.user.php';
-//Updated upstream;
-$user = new USER($dbh);
-$user = new USER($dbh);
-// Stashed changes;
+$membre = new MEMBRE($dbh);
 ?>
