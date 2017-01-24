@@ -27,7 +27,21 @@ if(isset($_POST['pourquoipas'])){
     }
     else{
         try{
+            $stmt = $dbh->prepare("SELECT login FROM membre WHERE login=:login");
+            $stmt->execute(array(':login'=>$login));
+            $row=$stmt->fetch(PDO::FETCH_ASSOC);
 
+            if($row['login']==$login){
+                $error = "Désolé, ce login est déjà pris";
+            }
+            else{
+                if($membre->register($prenom,$nom,$login,$m_passe,$img)){
+                    $membre->redirect('accueil.php')
+                }
+            }
+        }
+        catch(PDOException $e){
+            echo $e->getMessage();
         }
     }
 }
