@@ -2,7 +2,40 @@
 
 require_once 'connexionDB.php';
 
-//Et on récupère les données
+if($membre->is_loggedin() != ""){
+    $membre->redirect('accueil.php');
+}
+
+if(isset($_POST['pourquoipas'])){
+    $prenom = trim($_POST['prenom']);
+    $nom = trim($_POST['nom']);
+    $login = trim($_POST['login']);
+    $m_passe = trim($_POST['m_passe']);
+    $img = trim($_POST['img']);
+
+    if($prenom==""){
+        $error[] = "Entrez un prénom";
+    }
+    else if($nom==""){
+        $error[] = "Entrez un nom";
+    }
+    else if($login==""){
+        $error[] = "Entrez un login";
+    }
+    else if($m_passe==""){
+        $error[] = "Entrez un mot de passe";
+    }
+    else{
+        try{
+
+        }
+    }
+}
+
+?>
+
+
+<!-- //Et on récupère les données
     $form = $_POST;
     $id_membre = '';
     $nom = $form[ 'nom' ];
@@ -20,6 +53,4 @@ require_once 'connexionDB.php';
 
 
     header('Location: ../index.php');
-    exit();
-
-?>
+    exit(); -->
