@@ -9,6 +9,11 @@
     	<title>Inscription</title>
 	</head>
 	<body>
+		<h1>Inscription</h1>
+		<form>
+			<label>Identifiant :</label>
+			<input types="text">
+		</form>
 	
 	</body>
 </html>

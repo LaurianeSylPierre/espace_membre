@@ -6,7 +6,7 @@
     	<meta http-equiv="X-UA-Compatible" content="ie=edge">
     	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     	<link rel="stylesheet" type="text/css" href="css/style.css" />
-    	<title>Inscription</title>
+    	<title>Modification</title>
 	</head>
 	<body>
 	
