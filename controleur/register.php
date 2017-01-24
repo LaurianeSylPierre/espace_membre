@@ -22,7 +22,7 @@ if(isset($_POST['pourquoipas'])){
     else if($login==""){
         $error[] = "Entrez un login";
     }
-    else if($m_passe==""){
+    else if(strlen($m_passe) < 6){
         $error[] = "Entrez un mot de passe";
     }
     else{
