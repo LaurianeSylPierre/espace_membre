@@ -2,16 +2,12 @@
 
 require_once '../controleur/connexionDB.php';
 
-if($membre->is_loggedin() != ""){
-    $membre->redirect('accueil.php');
-}
-
-if(isset($_POST['pourquoipas'])){
-    $prenom = trim($_POST['prenom']);
-    $nom = trim($_POST['nom']);
-    $login = trim($_POST['login']);
-    $m_passe = trim($_POST['m_passe']);
-    $img = trim($_POST['img']);
+    $post = $_POST;
+    $prenom = $_POST['prenom'];
+    $nom = $_POST['nom'];
+    $login = $_POST['login'];
+    $m_passe = $_POST['m_passe'];
+    $img = $_POST['img'];
 
     if($prenom==""){
         $error[] = "Entrez un prénom";
@@ -44,7 +40,7 @@ if(isset($_POST['pourquoipas'])){
             echo $e->getMessage();
         }
     }
-}
+
 
 ?>
 
