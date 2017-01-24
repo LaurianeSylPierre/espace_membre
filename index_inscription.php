@@ -37,7 +37,7 @@
 							<input types="text" class="col-md-3" name="img">
 					</div>
 
-					<button class="btn btn-default col-md-offset-7 bouton" type="submit">Envoyer</button>
+					<button class="btn btn-default col-md-offset-7 pourquoipas" type="submit">Envoyer</button>
 				</form>
 		</div>
 	</body>
