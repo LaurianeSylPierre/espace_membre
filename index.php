@@ -35,7 +35,7 @@
                 <button class="col-md-2 col-md-offset-5">Se connecter</button>
 
                 <div class="col-md-2 col-md-offset-5 jeankevin">
-                    <p>Pas encore de compte ? Inscrivez vous ici !</p>
+                    <p>Pas encore de compte ? <a href="index_inscription.php">Inscrivez vous ici !</a></p>
                 </div>
 
             </form>

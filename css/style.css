@@ -1,3 +1,5 @@
+/* Page index.php */
+
 h2{
 	text-align: center;
 	margin-top: 20%;
@@ -29,4 +31,25 @@ button{
 .jeankevin{
 	text-align: center;
 	margin-top: 1%;
+}
+
+
+/* Page index_inscription.php */
+
+h1{
+	text-align: center;
+	margin-bottom: 8%;
+}
+
+.mt10 {
+	margin-top: 2%;
+}
+
+.formulaire{
+	border-radius: 25px;
+    background: #73AD21;
+    width: 100%;
+    height: 50%;
+    padding-bottom: 5%;
+    padding-top: 5%;
 }

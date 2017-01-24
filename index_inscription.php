@@ -10,10 +10,33 @@
 	</head>
 	<body>
 		<h1>Inscription</h1>
-		<form>
-			<label>Identifiant :</label>
-			<input types="text">
-		</form>
-	
+		<div class="container">
+				<form class="formulaire">
+					<div class="row mt100">
+							<label class="col-md-5 text-right">Identifiant :</label>
+							<input types="text" class="col-md-3">
+					</div>
+					<div class="row mt10">
+							<label class="col-md-5 text-right">Mot de passe :</label>
+							<input types="text" class="col-md-3">
+					</div>
+					<div class="row mt10">
+							<label class="col-md-5 text-right">Ressaisisez votre mot de passe :</label>
+							<input types="text" class="col-md-3">
+					</div>
+					<div class="row mt10">
+							<label class="col-md-5 text-right">Nom :</label>
+							<input types="text" class="col-md-3">
+					</div>
+					<div class="row mt10">
+							<label class="col-md-5 text-right">Prénom :</label>
+							<input types="text" class="col-md-3">
+					</div>
+					<div class="row mt10">
+							<label class="col-md-5 text-right">Images :</label>
+							<input types="text" class="col-md-3">
+					</div>
+				</form>
+		</div>
 	</body>
 </html>
