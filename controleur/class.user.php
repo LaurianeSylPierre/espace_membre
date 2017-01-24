@@ -39,7 +39,7 @@
         public function login($login, $m_passe){
             try{
                 $stmt = $this->db->prepare("SELECT * FROM membre WHERE login=:login LIMIT 1");
-                $stmt->execute(array(':login=>'$login));
+                $stmt->execute(array(':login'=>$login));
                 $membreRow=$stmt->fetch(PDO::FETCH_ASSOC); //permet la récupération de l'array
 
                 if($stmt->rowCOUNT() > 0){ //Si l'utilisateur entre des données
