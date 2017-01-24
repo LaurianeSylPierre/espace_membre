@@ -2,11 +2,11 @@
 
 //Ce fichier contient les fonctions (register, login, is_loggedin et redirect) qui permettent de maintenir les activités de l'utilisateur
 
-    class USER {
+    class MEMBRE {
         private $db;
 
         function __construct($dbh){
-            $this->$db = $dbh;
+            $this->db = $dbh;
         }
 
         //Pour s'enregistrer

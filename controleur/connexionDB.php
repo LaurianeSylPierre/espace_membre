@@ -18,5 +18,5 @@ $pass = 'U9YDV9eNf5';
     }
 
 include_once 'class.user.php';
-$user = new USER($dbh);
+$membre = new MEMBRE($dbh);
 ?>

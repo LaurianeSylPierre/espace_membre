@@ -1,6 +1,6 @@
 <?php
 
-require_once 'connexionDB.php';
+require_once '../controleur/connexionDB.php';
 
 if($membre->is_loggedin() != ""){
     $membre->redirect('accueil.php');
@@ -36,7 +36,7 @@ if(isset($_POST['pourquoipas'])){
             }
             else{
                 if($membre->register($prenom,$nom,$login,$m_passe,$img)){
-                    $membre->redirect('accueil.php')
+                    $membre->redirect('accueil.php');
                 }
             }
         }
