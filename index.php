@@ -17,7 +17,7 @@
         </div>
 
         <div class="row">
-            <form action="" class="conform">
+            <form method="POST" action="controleur/login.php" class="conform">
 
                 <div class="row">
                     <input class="col-md-2 col-md-offset-5 id" type="text" name="nomcon" placeholder="Identifiant">
@@ -32,8 +32,12 @@
                 </div>
         
         
-                <button class="col-md-2 col-md-offset-5">Se connecter</button>
-        
+                <button class="col-md-2 col-md-offset-5" type="submit">Se connecter</button>
+
+                <div class="col-md-2 col-md-offset-5 jeankevin">
+                    <p>Pas encore de compte ? <a href="index_inscription.php">Inscrivez vous ici !</a></p>
+                </div>
+
             </form>
         </div>
     </div>
