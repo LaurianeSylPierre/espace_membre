@@ -33,6 +33,11 @@ $nom = "../img/".$fichier;
 $resultat = move_uploaded_file($_FILES['file']['tmp_name'],$nom);
 if ($resultat) echo "Transfert réussi";
 
+// On insere les donnÃ©es dans le tableau
+$add_comm = "INSERT INTO membre (img) VALUES (:img)";
 
-inser
+// On prepare l'insertion
+$query = $dbh->prepare( $add_comm );
+// On exÃ©cute l'insertion
+$query->execute( array( ':img'=>$fichier ) );
 
