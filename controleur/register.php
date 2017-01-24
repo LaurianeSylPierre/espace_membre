@@ -2,7 +2,54 @@
 
 require_once 'connexionDB.php';
 
-//Et on récupère les données
+if($membre->is_loggedin() != ""){
+    $membre->redirect('accueil.php');
+}
+
+if(isset($_POST['pourquoipas'])){
+    $prenom = trim($_POST['prenom']);
+    $nom = trim($_POST['nom']);
+    $login = trim($_POST['login']);
+    $m_passe = trim($_POST['m_passe']);
+    $img = trim($_POST['img']);
+
+    if($prenom==""){
+        $error[] = "Entrez un prénom";
+    }
+    else if($nom==""){
+        $error[] = "Entrez un nom";
+    }
+    else if($login==""){
+        $error[] = "Entrez un login";
+    }
+    else if($m_passe==""){
+        $error[] = "Entrez un mot de passe";
+    }
+    else{
+        try{
+            $stmt = $dbh->prepare("SELECT login FROM membre WHERE login=:login");
+            $stmt->execute(array(':login'=>$login));
+            $row=$stmt->fetch(PDO::FETCH_ASSOC);
+
+            if($row['login']==$login){
+                $error = "Désolé, ce login est déjà pris";
+            }
+            else{
+                if($membre->register($prenom,$nom,$login,$m_passe,$img)){
+                    $membre->redirect('accueil.php')
+                }
+            }
+        }
+        catch(PDOException $e){
+            echo $e->getMessage();
+        }
+    }
+}
+
+?>
+
+
+<!-- //Et on récupère les données
     $form = $_POST;
     $id_membre = '';
     $nom = $form[ 'nom' ];
@@ -20,6 +67,4 @@ require_once 'connexionDB.php';
 
 
     header('Location: ../index.php');
-    exit();
-
-?>
+    exit(); -->
