@@ -13,7 +13,7 @@
 
         public function register($prenom, $nom, $login, $m_passe, $chem){
             try {
-                $new_password = password_hash($m_passe, PASSWORD_DEFAULT);
+                $new_password = password_hash($m_passe, PASSWORD_BCRYPT);
 
        //stam = statement
                 $stmt = $this->db->prepare("INSERT INTO membre (prenom, nom, login, m_passe, img) 
@@ -38,15 +38,15 @@
         //Pour se connecter
 
         public function login($login, $m_passe){
+
             try{
-                $stmt = $this->db->prepare("SELECT * FROM membre WHERE login=':login' LIMIT 1");
+                $stmt = $this->db->prepare("SELECT * FROM membre WHERE login=:login LIMIT 1");
                 $stmt->execute(array(':login'=>$login));
                 $membreRow=$stmt->fetch(PDO::FETCH_ASSOC); //permet la récupération de l'array
 
                 if($stmt->rowCount() > 0){ //Si l'utilisateur entre des données
-
                     if(password_verify($m_passe, $membreRow['m_passe'])){
-                        $_SESSION['login_session'] = $membreRow['id_membre'];
+                        $_SESSION['login_session'] = $membreRow['login'];
                     }
                     else{
                         return false;
