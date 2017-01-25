@@ -11,19 +11,20 @@
 
         //Pour s'enregistrer
 
-        public function register($prenom, $nom, $login, $m_passe){
+        public function register($prenom, $nom, $login, $m_passe, $chem){
             try {
                 $new_password = password_hash($m_passe, PASSWORD_DEFAULT);
 
        //stam = statement
-                $stmt = $this->db->prepare("INSERT INTO membre (prenom, nom, login, m_passe)
-                                                           VALUES(:prenom, :nom, :login, :m_passe)");
+                $stmt = $this->db->prepare("INSERT INTO membre (prenom, nom, login, m_passe, img) 
+                                            VALUES(:prenom, :nom, :login, :m_passe, :img)");
 
                   //bindparam va relier les valeurs aux fonctions des valeurs
                 $stmt->bindparam(":prenom", $prenom);
                 $stmt->bindparam(":nom", $nom);
                 $stmt->bindparam(":login", $login);
                 $stmt->bindparam(":m_passe", $new_password);
+                $stmt->bindparam(":img",$chem);
                 $stmt->execute();
 
                 return $stmt;

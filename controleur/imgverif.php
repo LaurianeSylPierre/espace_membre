@@ -27,17 +27,18 @@ function verifimg(){
 
 
 //Créer un identifiant difficile à deviner
-$fichier = md5(uniqid(rand(), true)).$_FILES['file']['name'];
+//$fichier = md5(uniqid(rand(), true)).$_FILES['file']['name'];
+$img = md5(uniqid(rand(), true)).$_FILES['file']['name'];
 
-$nom = "../img/".$fichier;
-$resultat = move_uploaded_file($_FILES['file']['tmp_name'],$nom);
-if ($resultat) echo "Transfert réussi";
+$chem = "../img/".$img;
+$resultat = move_uploaded_file($_FILES['file']['tmp_name'],$chem);
+if ($resultat) ;
 
-// On insere les donnÃ©es dans le tableau
-$add_comm = "INSERT INTO membre (img) VALUES (:img)";
-
-// On prepare l'insertion
-$query = $dbh->prepare( $add_comm );
-// On exÃ©cute l'insertion
-$query->execute( array( ':img'=>$fichier ) );
+//// On insere les donnÃ©es dans le tableau
+//$add_comm = "INSERT INTO membre (img) VALUES (:img)";
+//
+//// On prepare l'insertion
+//$query = $dbh->prepare( $add_comm );
+//// On exÃ©cute l'insertion
+//$query->execute( array( ':img'=>$fichier ) );
 

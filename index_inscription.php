@@ -11,7 +11,7 @@
 	<body>
 		<h1>Inscription</h1>
 		<div class="container">
-				<form method="POST" action="controleur/register.php" class="formulaire">
+				<form method="POST" enctype="multipart/form-data"  action="controleur/register.php" class="formulaire">
 					<div class="row">
 							<label class="col-md-5 text-right">Identifiant :</label>
 							<input types="text" class="col-md-3" name="login">
@@ -34,7 +34,8 @@
 					</div>
 					<div class="row mt10">
 							<label class="col-md-5 text-right">Images :</label>
-							<input types="text" class="col-md-3" name="img">
+                        <input type="hidden" name="filesize" value="150000" />
+                        <input type="file" name="file" />
 					</div>
 
 					<button class="btn btn-default col-md-offset-7 pourquoipas" type="submit">Envoyer</button>
