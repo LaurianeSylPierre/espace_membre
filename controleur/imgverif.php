@@ -32,6 +32,7 @@ $img = md5(uniqid(rand(), true)).$_FILES['file']['name'];
 
 $chem = "../img/".$img;
 $resultat = move_uploaded_file($_FILES['file']['tmp_name'],$chem);
+$chem = "img/".$img;
 if ($resultat) ;
 
 //// On insere les donnÃ©es dans le tableau
