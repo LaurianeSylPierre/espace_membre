@@ -91,3 +91,15 @@ body{
 input{
 	color: black;
 }
+
+/*Page accueil.php*/
+
+.bienvenue{
+	background: #336699;
+	color: white;
+}
+
+.zoneimg{
+	display: flex;
+	flex-direction: column;
+}
