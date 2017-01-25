@@ -1,8 +1,8 @@
 <?php
-    include_once 'controleur/connexionDB.php';
+    include_once '../controleur/connexionDB.php';
 
     if(!$membre->is_loggedin()){
-        $membre->redirect('.../controleur/index.php');
+        $membre->redirect('../controleur/index.php');
     }
 
     $membre_login = $_SESSION['login_session'];
@@ -17,8 +17,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
     <title>Espace Membre</title>
 </head>
 <body>
@@ -41,6 +41,7 @@
                 <div class="informations"><?php print($membreRow['login']);?></div>
                 <div class="categories">Mot de Passe : </div>
                 <div class="informations"><?php print($membreRow['m_passe']);?></div>
+                <a href="index_modifications.php" class="modifier">Modifier votre profil</a>
             </div>
         </main>
         <footer></footer>

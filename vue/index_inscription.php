@@ -11,7 +11,7 @@
 	<body>
 		<h1>Inscription</h1>
 		<div class="container">
-				<form method="POST" enctype="multipart/form-data"  action="controleur/register.php" class="formulaire">
+				<form method="POST" enctype="multipart/form-data"  action="../controleur/register.php" class="formulaire">
 					<div class="row">
 							<label class="col-md-5 text-right">Identifiant :</label>
 							<input types="text" class="col-md-3" name="login">

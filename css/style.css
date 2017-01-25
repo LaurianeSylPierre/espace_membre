@@ -125,5 +125,10 @@ img{
 
 .categories, .informations{
 	margin: 1%;
-	
+}
+
+.modifier{
+	text-align: right;
+	font-size: 11px;
+	margin: 1%;
 }

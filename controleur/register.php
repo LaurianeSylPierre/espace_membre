@@ -40,7 +40,7 @@ if (!isset($error)) {
         else{
 
             if($membre->register($prenom,$nom,$login,$m_passe,$chem)){
-                $membre->redirect('../accueil.php');
+                $membre->redirect('../vue/felicitations.php');
             }
         }
     }
@@ -48,5 +48,3 @@ if (!isset($error)) {
         echo $e->getMessage();
     }
 }
-
-

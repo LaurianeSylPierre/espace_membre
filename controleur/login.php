@@ -2,7 +2,7 @@
     require_once 'connexionDB.php';
 
     if($membre->is_loggedin() != ""){
-        $membre->redirect('accueil.php');
+        $membre->redirect('../vue/accueil.php');
     }
 
     $login = $_POST['login'];
@@ -10,7 +10,7 @@
 
     if($membre->login($login, $m_passe)){
 
-       $membre->redirect('controleur/accueil.php');
+       $membre->redirect('../vue/accueil.php');
     }
     else{
         echo "Mauvais login ou mot de passe";
