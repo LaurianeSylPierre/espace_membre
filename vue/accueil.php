@@ -1,6 +1,8 @@
 <?php
     include_once '../controleur/connexionDB.php';
 
+    $url='http://mathieuc.marmier.codeur.online/add_member/';
+
     if(!$membre->is_loggedin()){
         $membre->redirect('../controleur/index.php');
     }
@@ -29,7 +31,7 @@
         </header>
         <main class="row">
             <div class="col-md-4 zoneimg">
-                <div class="imguser"><img src="<?php print($membreRow['img']);?>" alt="votre avatar"></div>
+                <div class="imguser"><img src="<?php print($url.$membreRow['img']);?>" alt="votre avatar"></div>
                 <div class="changerimg"><button>Changer votre avatar</button></div>
             </div>
             <div class="col-md-8 contour">

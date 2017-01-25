@@ -36,12 +36,12 @@ require_once 'controleur/connexionDB.php';
                 <div class="checkbox col-md-2 col-md-offset-5">
                     <label><input type="checkbox" value="">Se souvenir de moi</label>
                 </div>
-        
-        
+
+
                 <button class="col-md-2 col-md-offset-5" type="submit">Se connecter</button>
 
                 <div class="col-md-2 col-md-offset-5 jeankevin">
-                    <p>Pas encore de compte ? <a href="index_inscription.php">Inscrivez vous ici !</a></p>
+                    <p>Pas encore de compte ? <a href="vue/index_inscription.php">Inscrivez vous ici !</a></p>
                 </div>
 
             </form>
