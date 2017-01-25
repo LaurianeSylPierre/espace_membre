@@ -2,7 +2,7 @@
 require_once ('../controleur/connexionDB.php');
 ?>
 
-<! doctype html>
+<!doctype html>
 
 <html>
    <head>

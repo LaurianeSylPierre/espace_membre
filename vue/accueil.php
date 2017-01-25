@@ -32,7 +32,7 @@
         <main class="row">
             <div class="col-md-4 zoneimg">
                 <div class="imguser"><img src="<?php print($url.$membreRow['img']);?>" alt="votre avatar"></div>
-                <div class="changerimg"><button>Changer votre avatar</button></div>
+                <div class="changerimg"><a href="img.php" class="btn btn-primary">Changer votre avatar</a></div>
             </div>
             <div class="col-md-8 contour">
                 <div class="categories">Nom : </div>
