@@ -94,12 +94,36 @@ input{
 
 /*Page accueil.php*/
 
+.accueil{
+	text-align: center;
+}
+
 .bienvenue{
 	background: #336699;
 	color: white;
+	border-radius: 0px 0px 25px 25px;
 }
 
 .zoneimg{
+	width: 30%;
+	margin: 2%;
 	display: flex;
 	flex-direction: column;
+}
+
+img{
+	width: 250px;
+	height: 250px;
+}
+
+.contour{
+	width: 60%;
+	margin: 2%;
+	background: #336699;
+	border-radius: 25px;
+}
+
+.categories, .informations{
+	margin: 1%;
+	
 }
