@@ -1,5 +1,5 @@
 <?php
-    include_once 'connexionDB.php';
+    include_once 'controleur/connexionDB.php';
 
     $membre_login = $_SESSION['login_session'];
     $stmt = $dbh->prepare("SELECT * FROM membre WHERE login = :login");
