@@ -6,7 +6,9 @@ require_once ('../controleur/connexionDB.php');
 
 <html>
    <head>
-      <title>images</title>
+       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+       <link rel="stylesheet" type="text/css" href="../css/style.css" />
+       <title>images</title>
    </head>
    <body>
       <h3>Image</h3>
@@ -21,6 +23,9 @@ require_once ('../controleur/imgverif.php');
 if (isset($_POST['button'])) {verifimg();}
 
 ?>
+
+
+          <a href="accueil.php">acceuil</a>
       </form>
    </body>
 </html>

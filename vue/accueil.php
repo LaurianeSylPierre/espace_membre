@@ -4,7 +4,7 @@
     $url='http://mathieuc.marmier.codeur.online/add_member/';
 
     if(!$membre->is_loggedin()){
-        $membre->redirect('../controleur/index.php');
+        $membre->redirect('../index.php');
     }
 
     $membre_login = $_SESSION['login_session'];

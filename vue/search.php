@@ -29,10 +29,6 @@ require_once '../controleur/connexionDB.php';
 
 <?php
 
-
-
-
-
 if(isset($_POST["search"])){
     $member = $_POST["search"];
 
@@ -43,29 +39,26 @@ if(isset($_POST["search"])){
     {
 
         ?>
+        <div class="search">
 
-            <div class="row">
-                <div class="col-md-3">
-                    <a href="accueil.php?toto=<?php echo $lingne["nom"];?>" name="link"><?php echo $lingne["nom"];?></a>
+                <div class="col-md-offset-5">
+                    <a href="accueil.php?ligne=<?php echo $lingne["nom"];?>" id="nom"><?php echo $lingne["nom"];?></a>
 
-                    <a href="accueil.php?toto=<?php echo $lingne["nom"];?>" name="link"><?php echo $lingne["prenom"];?></a>
 
-                    <a href="accueil.php?toto=<?php echo $lingne["nom"];?>" name="link"><?php echo $lingne["login"];?></a>
+                    <a href="accueil.php?ligne=<?php echo $lingne["prenom"];?>" id="prenom"><?php echo $lingne["prenom"];?></a>
+
+
+                    <a href="accueil.php?ligne=<?php echo $lingne["login"];?>" id="login"><?php echo $lingne["login"];?></a>
 
                 </div>
             </div>
-
-
-
-
-
-
     <?php } ?>
     <?php } ?>
         <?php } ?>
 
 
-
     </div>
+
+</div>
     </body>
     </html>

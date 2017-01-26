@@ -20,15 +20,15 @@ $pass = 'U9YDV9eNf5';
 include_once 'class.user.php';
 $membre = new MEMBRE($dbh);
 
-$value = 'login';
-
-setcookie("login", $value);
-setcookie("login", $value, time()+3600);  /* expire dans 1 heure */
-setcookie("login", $value, time()+3600, "/~rasmus/", "example.com", 1);
-
-$value = 'm_passe';
-
-setcookie("m_passe", $value);
-setcookie("m_passe", $value, time()+3600);  /* expire dans 1 heure */
-setcookie("m_passe", $value, time()+3600, "/~rasmus/", "example.com", 1);
+//$value = 'login';
+//
+//setcookie("login", $value);
+//setcookie("login", $value, time()+3600);  /* expire dans 1 heure */
+//setcookie("login", $value, time()+3600, "/~rasmus/", "example.com", 1);
+//
+//$value = 'm_passe';
+//
+//setcookie("m_passe", $value);
+//setcookie("m_passe", $value, time()+3600);  /* expire dans 1 heure */
+//setcookie("m_passe", $value, time()+3600, "/~rasmus/", "example.com", 1);
 ?>
