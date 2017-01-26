@@ -152,18 +152,7 @@ img{
 
 
 /*recherche*/
-#nom{
-	margin-top: 100%;
-	size: 50px;
-
-}
-
-#login{
-	size: 50px;
-
-
-}
-
-#login{size: 50px;
-
+.sea {
+	display: block;
+	size: 20px;
 }
