@@ -73,6 +73,8 @@
             header("Location: $url");
         }
 
+        //Pour si tu veux modifier ton profil
+
         public function modify($id_membre, $prenom, $nom, $login, $m_passe){
             try {
                 $new_password = password_hash($m_passe, PASSWORD_BCRYPT);
@@ -91,6 +93,23 @@
                 $stmt->execute();
 
                 return $stmt;
+            }
+
+            catch (PDOException $e) {
+                echo $e->getMessage();
+            }
+        }
+
+        //Pour laisser des infos supplémentaires sur son profil
+
+        public function commentary($membre_login, $comm){
+            try{
+                $stmt= $this->db->prepare("INSERT INTO commentaire_utilisateur (login_uti, comm_uti)
+                VALUES (:login_uti, :comm_uti)");
+
+                $stmt->bindparam(':login_uti', $membre_login);
+                $stmt->bindparam(':comm_uti', $comm);
+                $stmt->execute();
             }
 
             catch (PDOException $e) {
