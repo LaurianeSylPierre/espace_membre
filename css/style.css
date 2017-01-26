@@ -137,3 +137,10 @@ img{
 	font-size: 11px;
 	margin: 1%;
 }
+
+/*Commentaires*/
+
+.comm{
+	margin: 0 auto;
+	width: 300px;
+}

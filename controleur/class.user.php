@@ -16,7 +16,7 @@
                 $new_password = password_hash($m_passe, PASSWORD_BCRYPT);
 
        //stam = statement
-                $stmt = $this->db->prepare("INSERT INTO membre (prenom, nom, login, m_passe, img) 
+                $stmt = $this->db->prepare("INSERT INTO membre (prenom, nom, login, m_passe, img)
                                             VALUES(:prenom, :nom, :login, :m_passe, :img)");
 
                   //bindparam va relier les valeurs aux fonctions des valeurs
@@ -71,6 +71,50 @@
 
         public function redirect($url){
             header("Location: $url");
+        }
+
+        //Pour si tu veux modifier ton profil
+
+        public function modify($id_membre, $prenom, $nom, $login, $m_passe){
+            try {
+                $new_password = password_hash($m_passe, PASSWORD_BCRYPT);
+       //stam = statement
+                $stmt = $this->db->prepare("UPDATE membre
+                    SET id_membre=:id_membre, nom=:nom,prenom=:prenom,login=:login,m_passe=:m_passe
+                    WHERE login=:login_session");
+
+                  //bindparam va relier les valeurs aux fonctions des valeurs
+                $stmt->bindparam(":login_session", $_SESSION['login_session']);
+                $stmt->bindparam(":id_membre", $id_membre);
+                $stmt->bindparam(":prenom", $prenom);
+                $stmt->bindparam(":nom", $nom);
+                $stmt->bindparam(":login", $login);
+                $stmt->bindparam(":m_passe", $new_password);
+                $stmt->execute();
+
+                return $stmt;
+            }
+
+            catch (PDOException $e) {
+                echo $e->getMessage();
+            }
+        }
+
+        //Pour laisser des infos supplémentaires sur son profil
+
+        public function commentary($membre_login, $comm){
+            try{
+                $stmt= $this->db->prepare("INSERT INTO commentaire_utilisateur (login_uti, comm_uti)
+                VALUES (:login_uti, :comm_uti)");
+
+                $stmt->bindparam(':login_uti', $membre_login);
+                $stmt->bindparam(':comm_uti', $comm);
+                $stmt->execute();
+            }
+
+            catch (PDOException $e) {
+                echo $e->getMessage();
+            }
         }
 
         //Pour se déconnecter
