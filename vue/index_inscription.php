@@ -18,11 +18,11 @@
 					</div>
 					<div class="row mt10">
 							<label class="col-md-5 text-right">Mot de passe :</label>
-							<input types="text" class="col-md-3" name="m_passe">
+							<input types="password" class="col-md-3" name="m_passe">
 					</div>
 					<div class="row mt10">
 							<label class="col-md-5 text-right">Ressaisisez votre mot de passe :</label>
-							<input types="text" class="col-md-3">
+							<input types="password" class="col-md-3">
 					</div>
 					<div class="row mt10">
 							<label class="col-md-5 text-right">Nom :</label>
