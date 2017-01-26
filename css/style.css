@@ -116,8 +116,13 @@ img{
 	height: 250px;
 }
 
+.changerimg{
+	margin: 4%;
+}
+
 .contour{
 	width: 60%;
+	height: 300px;
 	margin: 2%;
 	background: #336699;
 	border-radius: 25px;
