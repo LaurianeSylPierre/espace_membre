@@ -28,6 +28,7 @@
     <div class="container accueil">
         <header class="row">
             <div class="col-md-12 bienvenue">Bienvenue <?php print($membreRow['login']);?></div>
+            <div class="col-md-12 recherche"><a href="search.php">recherche</a></div>
         </header>
         <main class="row">
             <div class="col-md-4 zoneimg">

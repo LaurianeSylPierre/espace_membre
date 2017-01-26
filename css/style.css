@@ -103,6 +103,11 @@ input{
 	color: white;
 	border-radius: 0px 0px 25px 25px;
 }
+.recherche{
+	background: #336699;
+	color: white;
+	border-radius: 0px 0px 25px 25px
+}
 
 .zoneimg{
 	width: 30%;
