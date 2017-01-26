@@ -117,6 +117,24 @@
             }
         }
 
+        //Pour modifier le commentaire déjà créé
+
+        public function modcomm($membre_login, $comm){
+            try{
+                $stmt= $this->db->prepare("UPDATE commentaire_utilisateur
+                    SET comm_uti=:comm_uti
+                    WHERE login_uti=:login_uti");
+
+                $stmt->bindparam(':login_uti', $membre_login);
+                $stmt->bindparam(':comm_uti', $comm);
+                $stmt->execute();
+            }
+
+            catch (PDOException $e) {
+                echo $e->getMessage();
+            }
+        }
+
         //Pour se déconnecter
 
         public function logout(){

@@ -55,7 +55,7 @@
             <div class="row">
                 <h3>Mettez des informations sur vous !</h3>
                 <div class="commentaire"><?php print($commRow['comm_uti']);?></div>
-                <a href="commentaire.php">Cliquez ici pour modifier vos informations complémentaires</a>
+                <a href="commentaire.php">Ajouter un commentaire</a> || <a href="modif_commentaire.php">Modifier le commentaire</a>
             </div>
         </main>
         <footer></footer>
